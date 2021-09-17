@@ -2,6 +2,8 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
+const { conditionalExpression } = require("@babel/types");
+
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -17,8 +19,8 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
+/* Whenever a variable is being used within javascript code, the computer first looks to find that specific varibale within the local scope and if it is not found within the local scope then 'closures' allow for the program to look withing its surrounding lexical environment which means it will look to find the variable within a scope that is one level higher. So the nestedFunction first tried looking for the internal variable within its own function first and when that was not found it looked for it in the higher scope. In javascript, child functions have the ability to access parent function variables and this system of inheritance only works one way which is down from parent to child, and not the other way around. 
+*/
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -28,8 +30,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(num) {
+  let sum = 0;
+  for (let i =0; i < num; i ++) {
+    sum = sum + (i+1); 
+  }
+
+  return sum; 
 
   }
  
