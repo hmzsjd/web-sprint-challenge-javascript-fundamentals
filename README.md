@@ -26,13 +26,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map() can be used when a transformation is required on the elements of an array without manipulating the original array, one example would be if we have an array of integers and wanted to double every single integer we would use .map()
+
+.filter() can be used to return a copy of an array with elements that only match the conditional that is provided. One example is if we have an array of student objects with their names and GPAs, we could use .filter() to return an array only of students that have a GPA of higher than 3.5 
+
+.reduce() can be used to manipulate or reshape data to return a single value. One example is if we have an array of the population of all US States, we could return the total population of all states or we could return the state with the highest population. 
+
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that can receive other functions as arguments and these functions that are passed in as arguments are known as callback functions. 
 
 3. Explain what a closure is.
 
+Closure is the ability for nested functions to reach out and find variables that are one scope higher. If the variable is not found in the local scope, the function will go one scope higher and look for the specific variable. This level of inheritance only works one way and that is downwards from parent to child functions. A parent function cannot access variable within the child function, but a child function can access variables of the parent. 
+
 4. Describe the four principles of the 'this' keyword.
 
+    Global Binding: 'this' points to the window if being used in the browser which is the global object. 
+    Implicit Binding: 'this' when used inside of an object will point to the object itself. When an object's method is invoked using dot notation, 'this' points to whatever is to the left of the dot. 
+    New Binding: 'this' refers to the specific instance of the objected that is created and returned when a constructor function is used. 
+    Explicit binding: 'this' refers to the object that is passed into the call() or apply() functions as an argument. 
+
 5. Why do we need super() in an extended class?
+
+Becasue super() passes the required information and calls the constructor of the parent class, it takes care of all the initializations that are common with the parent class as well as the binding. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
